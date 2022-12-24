@@ -1,0 +1,25 @@
+package Program;
+
+import java.util.Scanner;
+
+public class Perfectno {
+public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	System.out.println("Enter a no");
+	int num=sc.nextInt();
+	int copy=num;
+	int sum =0;
+	int fact=1;
+	while(num!=0) {
+		int rem=num%10;
+		for(int i=rem; i>=1; i++)
+			fact=fact*i;
+		sum=sum+fact;
+		num=num/10;
+	}if(copy==sum) {
+		System.out.println("is perfect num");
+	}else {
+		System.out.println("not a perfect no");
+	}
+}
+}

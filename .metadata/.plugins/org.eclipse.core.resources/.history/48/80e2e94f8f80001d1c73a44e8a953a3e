@@ -1,0 +1,28 @@
+package Program;
+
+import java.util.Scanner;
+
+public class Anmstrongno {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Number");
+		int num=sc.nextInt();
+		int copy=num;
+		int x=num;
+		int count=0;
+		int ans=0;
+		while(num!=0) {
+			int rem= num%10;
+			count++;
+			num=num/10;
+		}
+		while(copy!=0) {
+			int d=copy%10;
+			ans=ans+(d*count);
+			copy=copy/10;
+			
+		}System.out.println(ans);
+			
+	}
+
+}
